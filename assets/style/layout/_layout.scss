@@ -1,0 +1,150 @@
+//全站字體
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@400;500&display=swap');
+
+body {
+    background-color: FBFBFB;
+    color: #222;
+    font-family:'Roboto', 'Noto Sans TC', sans-serif;
+}
+.navbar-dark .navbar-nav .nav-link {
+    // color: #fff;
+}
+
+h3,h4,h5,h6 {
+    line-height: $line-height-base;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h3 {
+    margin-bottom: 48px;
+    .h3-line {
+        width: 50px;
+        height: 3px;
+        background-color: $primary;
+        margin:16px auto 0;
+    }
+}
+h4 {
+    font-weight: 700;
+    .h4-line {
+        width: 50px;
+        height: 3px;
+        background-color: $white;
+        margin:16px 0 32px;
+        @include mobile {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $primary;
+        }
+    }
+}
+
+.display-6 {
+    font-weight: 500;
+    color:$primary;
+}
+.number-title {
+    font-size: 50px;
+    font-weight: 500;
+    -webkit-text-stroke: 1px $primary;
+    color:#fff;
+}
+.fs-6 {
+    font-size: 18px;
+    line-height:1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    padding: 100px 0;
+    @include mobile {
+        padding: 40px 0;
+    }
+}
+
+ul {
+    li {
+        list-style-type: none;
+    }
+}
+
+
+.download-btn {
+    a {
+        text-align: center;
+        display:inline-block;
+        border-radius:50px;
+        padding:12px 42px;
+        text-decoration: none;
+        font-size: 18px;
+        transition:.3s;
+        color: #fff;
+        background-color: #333;   
+        letter-spacing:2px;
+         &:hover {
+            background-color: $primary;
+            color: #fff;
+         }
+    }
+}
+
+
+
+//header
+.navbar{
+    padding:20px 0;
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    background-color: $secondary;
+
+    .navbar-brand {
+        height:42px;
+        width: 159px;
+        background: url('../images/logo-yfy.svg') center center no-repeat;
+        @include mobile{
+            // height: 24px;
+            // width: 24px;
+        }
+    }
+}
+
+
+
+//footer
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #e7e7e7;
+    color: #737373;
+    position: relative;
+    p {
+        margin: 10px 0;
+        font-size: 14px;
+        line-height: 24px;
+        font-family: "Noto Sans TC",sans-serif;
+    }
+    a {
+        border-bottom: 1px solid #737373;
+        font-size: 14px;
+        line-height: 24px;
+        color: #737373;
+        font-family: "Noto Sans TC",sans-serif;
+        transition: .3s;
+        &:hover {
+            color: #737373;
+            opacity: .8;
+        }
+    }
+}
