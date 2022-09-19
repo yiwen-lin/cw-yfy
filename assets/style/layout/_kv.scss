@@ -23,10 +23,10 @@
   }
 }
 
-.cls-2, .cls-5, .cls-4, .bc, .bm, .at, .er {
+.cls-2, .cls-5, .cls-4, .bc, .f3-bc, .bm, .at, .f4-at, .er, .i, .es, .f5-bm, .f6-i {
   animation: .6s infinite linear;
 }
-.cls-2, .cls-4, .at {
+.cls-2, .cls-4, .at, .f4-at, .i, .es, .f5-bm, .f6-i {
   animation-name: dashLine4;
 }
 
@@ -34,8 +34,15 @@
   animation-name: dashLine6;
 }
 
-.bc, .bm, .er {
-  animation-name: dashLine2;
+.bc, .f3-bc, .bm, .er {
+  animation-name: dashLine4;
+  @media screen and (min-width: 768px) {
+    animation-name: dashLine2;
+  }
+}
+
+.bc, .f3-bc, .f5-bm {
+  animation-direction: reverse;
 }
 
 @keyframes fadeIn {

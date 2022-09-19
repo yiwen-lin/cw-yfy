@@ -45,10 +45,12 @@ $(function() {
         </div>
       </div>`;
       $('#lightbox-content').html(str);
+      $('body').addClass('opened');
       $('.lightbox-block').fadeIn();
     });
   });
   $('.lightbox-close').click(function() {
+    $('body').removeClass('opened');
     $('.lightbox-block').fadeOut();
   });
 });

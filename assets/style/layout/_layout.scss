@@ -5,6 +5,9 @@ body {
     background-color: FBFBFB;
     color: #222;
     font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    &.opened {
+      overflow: hidden;
+    }
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -218,8 +221,9 @@ footer {
     padding: 70px 0px;
     background-color: $secondary;
     position: relative;
-    min-height: 100vh;
     width: 100%;
+    height: 100%;
+    overflow: scroll;
     z-index: 10;
     .lightbox-close {
         position: absolute;
