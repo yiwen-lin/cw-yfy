@@ -1,0 +1,79 @@
+#map_icon {
+  > g {
+    opacity: 0;
+    animation: fadeIn .5s .5s alternate forwards ease-in;
+    cursor: pointer;
+    > g {
+      transition: opacity 0.1s;
+      &:first-child {
+        opacity: 0;
+      }
+      &:last-child {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      > g:first-child {
+        opacity: 1;
+      }
+      > g:last-child {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.cls-2, .cls-5, .cls-4, .bc, .bm, .at, .er {
+  animation: .6s infinite linear;
+}
+.cls-2, .cls-4, .at {
+  animation-name: dashLine4;
+}
+
+.cls-5 {
+  animation-name: dashLine6;
+}
+
+.bc, .bm, .er {
+  animation-name: dashLine2;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dashLine4 {
+  0% {
+    stroke-dasharray: 4;
+    stroke-dashoffset: 8;
+  }
+  100% {
+    stroke-dasharray: 4;
+    stroke-dashoffset: 4;
+  }
+}
+@keyframes dashLine6 {
+  0% {
+    stroke-dasharray: 6;
+    stroke-dashoffset: 12;
+  }
+  100% {
+    stroke-dasharray: 6;
+    stroke-dashoffset: 6;
+  }
+}
+@keyframes dashLine2 {
+  0% {
+    stroke-dasharray: 2;
+    stroke-dashoffset: 4;
+  }
+  100% {
+    stroke-dasharray: 2;
+    stroke-dashoffset: 2;
+  }
+}
