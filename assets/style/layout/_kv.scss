@@ -23,10 +23,10 @@
   }
 }
 
-.cls-2, .cls-5, .cls-4, .bc, .f3-bc, .bm, .at, .f4-at, .er, .i, .es, .f5-bm, .f6-i {
+.cls-2, .cls-5, .cls-4, .bc, .f3-bc, .bm, .at, .f4-at, .er, .i, .es, .f2-es, .f5-bm, .f6-i {
   animation: .6s infinite linear;
 }
-.cls-2, .cls-4, .at, .f4-at, .i, .es, .f5-bm, .f6-i {
+.cls-2, .cls-4, .at, .f4-at, .i, .es, .f2-es, .f5-bm, .f6-i {
   animation-name: dashLine4;
 }
 
@@ -41,7 +41,7 @@
   }
 }
 
-.bc, .f3-bc, .f5-bm {
+.bc, .f3-bc, .f5-bm, .f2-es, .er {
   animation-direction: reverse;
 }
 
