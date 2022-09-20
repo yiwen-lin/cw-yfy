@@ -259,7 +259,8 @@ footer {
     padding: 0 0 20px;
 }
 .op-mb {
-    height: calc(100vh - 58px);
+    // height: calc(100vh - 58px);
+    min-height: 100vh;
     padding-top:80px;
     .title-block {
         position: relative;
@@ -327,6 +328,7 @@ footer {
     padding-top: 150px;
     @include mobile {
         background-image: none;
+        padding-top: 40px;
     }
 
     .s1-card {
