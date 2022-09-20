@@ -30,7 +30,7 @@ $(function() {
       svg: '<img src="../../assets/images/step7-mb.png">',
     }
   ];
-  console.log(topic);
+
   $('#map_icon > g').each(function() {
     $(this).click(function() {
       const idx = $(this).index();
@@ -46,11 +46,36 @@ $(function() {
       </div>`;
       $('#lightbox-content').html(str);
       $('body').addClass('opened');
-      $('.lightbox-block').fadeIn();
+      $('.lightbox-block, .lightbox-black').fadeIn();
     });
   });
-  $('.lightbox-close').click(function() {
+  $('.lightbox-close, .lightbox-black').click(function() {
     $('body').removeClass('opened');
-    $('.lightbox-block').fadeOut();
+    $('.lightbox-block, .lightbox-black').fadeOut();
+  });
+
+  const animNum = (EL) => {
+    if (EL._isAnimated) return; // Animate only once!
+    EL._isAnimated = true;
+    
+    $(EL).prop('Counter', 0).animate({
+      Counter: EL.dataset.num
+    }, {
+      duration: 2000,
+      step: function(now) {
+        const text = (Math.ceil(now)).toLocaleString('en-US');
+        const html = text.split(",").map(n => `<span class="count">${n}</span>`).join(",");
+        $(this).html(html);
+      }
+    });
+  };
+  const inViewport = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) animNum(entry.target);
+    });
+  };
+  $("[data-num]").each((i, EL) => {
+    const observer = new IntersectionObserver(inViewport);
+    observer.observe(EL);
   });
 });
