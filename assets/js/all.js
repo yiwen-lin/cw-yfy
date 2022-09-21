@@ -35,10 +35,10 @@ $(function() {
     $(this).click(function() {
       const idx = $(this).index();
       const data = topic[idx];
-      const str = `<div class="col-lg-6">
+      const str = `<div class="col-lg-5">
         ${data.svg}
       </div>
-      <div class="col-lg-6 lightbox-text mt-4 mt-lg-0">
+      <div class="col-lg-7 lightbox-text mt-4 mt-lg-0">
         <div class="step-block">
           <div class="mb-4"><span class="step-title">${data.name}</span></div>
           <p>${data.content}</p>
