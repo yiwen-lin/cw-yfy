@@ -1,32 +1,45 @@
 #map_icon {
-  > g {
-    opacity: 0;
-    animation: fadeIn .5s .5s alternate forwards ease-in;
+  svg {
+    transform-origin: center bottom;
+    transition: transform 0.3s;
     cursor: pointer;
-    > g {
-      transition: opacity 0.1s;
-      &:first-child {
-        opacity: 0;
-      }
-      &:last-child {
-        opacity: 1;
-      }
+    .pin-cls-1 {
+      fill: #689d47;
+    }
+    .pin-cls-3 {
+      fill: #fff;
+      // stroke: #727171;
+      stroke: rgba(113, 113, 113, .25);
+      stroke-miterlimit: 10;
+    }
+    .pin-cls-4 {
+      fill: #fff;
+      stroke: #fff;
+      transform-origin: center;
+      animation: scale 2s infinite;
     }
     &:hover {
-      > g:first-child {
-        opacity: 1;
+      transform: scale(1.4387596391);
+      .pin-cls-1 {
+        fill: #fff;
       }
-      > g:last-child {
-        opacity: 0;
+      .pin-cls-3 {
+        fill: #689d47;
+        stroke: #689d47;
+      }
+      .pin-cls-4 {
+        fill: transparent;
+        stroke: transparent;
+        animation: none;
       }
     }
   }
 }
 
-.cls-2, .cls-5, .cls-4, .bc, .f3-bc, .bm, .at, .f4-at, .er, .i, .es, .f2-es, .f5-bm, .f6-i {
+.cls-2, .cls-3, .cls-5, .cls-4, .cls-6, .bc, .f3-bc, .bm, .at, .f4-at, .er, .i, .es, .f2-es, .f5-bm, .f6-i {
   animation: .6s infinite linear;
 }
-.cls-2, .cls-4, .at, .f4-at, .i, .es, .f2-es, .f5-bm, .f6-i {
+.cls-2, .cls-3, .cls-4, .cls-6, .at, .f4-at, .i, .es, .f2-es, .f5-bm, .f6-i {
   animation-name: dashLine4;
 }
 
@@ -45,12 +58,190 @@
   animation-direction: reverse;
 }
 
+#car-1-1, #car-2-1 {
+  opacity: 1;
+}
+#car-1-2, #car-2-2 {
+  opacity: 0;
+}
+
+#car-1-1 {
+  animation: car1 12s infinite linear;
+}
+#car-2-1 {
+  animation: car2 8s infinite linear;
+}
+#car-1-2 {
+  animation: car1 12s infinite reverse linear;
+}
+#car-2-2 {
+  animation: car2 8s infinite reverse linear;
+}
+
+.person {
+  position: absolute;
+  z-index: 2;
+}
+.person-1 {
+  top: 35%;
+  width: 30px;
+  height: 85px;
+  background-image: url('../images/person-1.png');
+  background-size: 90px 85px;
+  animation: walkCycle1 0.5s steps(3) infinite, lineForward1 30s linear forwards alternate infinite;
+}
+.person-2 {
+  top: 71%;
+  width: 20px;
+  height: 85px;
+  background-image: url('../images/person-2.png');
+  background-size: 60px 85px;
+  animation: walkCycle2 0.5s steps(3) infinite, lineForward2 50s linear forwards alternate infinite;
+}
+.person-3 {
+  top: 45.5%;
+  width: 20px;
+  height: 85px;
+  background-image: url('../images/person-3.png');
+  background-size: 60px 85px;
+  animation: walkCycle2 0.5s steps(3) infinite, lineForward3 40s linear forwards alternate infinite;
+}
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+  50% {
+    opacity: .5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(.8);
+  }
+}
+
+@keyframes car1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-13%, -11.2%);
+    opacity: 1;
+  }
+  51% {
+    transform: translate(-13%, -11.2%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-13%, -11.2%);
+    opacity: 0;
+  }
+}
+
+@keyframes car2 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(8.4%, 8%);
+    opacity: 1;
+  }
+  51% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate(8.4%, 8%);
+    opacity: 0;
+  }
+}
+
+@keyframes walkCycle1 {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -90px;
+  }
+}
+@keyframes walkCycle2 {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -60px;
+  }
+}
+@keyframes lineForward1 {
+  0% {
+    left: 10.5%;
+    transform: scaleX(1);
+  }
+  49% {
+    transform: scaleX(1);
+  }
+  50% {
+    left: 25%;
+    transform: scaleX(-1);
+  }
+  99% {
+    transform: scaleX(-1);
+  }
+  100% {
+    left: 10.5%;
+    transform: scaleX(1);
+  }
+}
+@keyframes lineForward2 {
+  0% {
+    left: 29%;
+    transform: scaleX(1);
+  }
+  49% {
+    transform: scaleX(1);
+  }
+  50% {
+    left: 49%;
+    transform: scaleX(-1);
+  }
+  99% {
+    transform: scaleX(-1);
+  }
+  100% {
+    left: 29%;
+    transform: scaleX(1);
+  }
+}
+@keyframes lineForward3 {
+  0% {
+    left: 89.5%;
+    transform: scaleX(-1);
+  }
+  49% {
+    transform: scaleX(-1);
+  }
+  50% {
+    left: 74.5%;
+    transform: scaleX(1);
+  }
+  99% {
+    transform: scaleX(1);
+  }
+  100% {
+    left: 89.5%;
+    transform: scaleX(-1);
   }
 }
 
@@ -82,5 +273,38 @@
   100% {
     stroke-dasharray: 2;
     stroke-dashoffset: 2;
+  }
+}
+
+.pin {
+  position: absolute;
+  width: 3.5%;
+  &.pin-1 {
+    top: 3.75%;
+    left: 21%;
+  }
+  &.pin-2 {
+    top: 30.5%;
+    left: 8.25%;
+  }
+  &.pin-3 {
+    top: 53.75%;
+    left: 38.7%;
+  }
+  &.pin-4 {
+    top: 40.5%;
+    left: 81.25%;
+  }
+  &.pin-5 {
+    top: 36.85%;
+    left: 50.9%;
+  }
+  &.pin-6 {
+    top: 10.5%;
+    left: 43.5%;
+  }
+  &.pin-7 {
+    top: 63.35%;
+    left: 12.65%;
   }
 }

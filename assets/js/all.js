@@ -31,7 +31,7 @@ $(function() {
     }
   ];
 
-  $('#map_icon > g').each(function() {
+  $('#map_icon > div').each(function() {
     $(this).click(function() {
       const idx = $(this).index();
       const data = topic[idx];
