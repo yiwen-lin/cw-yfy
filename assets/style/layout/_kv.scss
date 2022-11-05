@@ -1,3 +1,7 @@
+.op-block {
+  margin-top: 8rem;
+}
+
 #map_icon {
   svg {
     transform-origin: center bottom;
@@ -36,86 +40,6 @@
   }
 }
 
-.cls-2, .cls-3, .cls-5, .cls-4, .cls-6, .bc, .f3-bc, .bm, .at, .f4-at, .er, .i, .es, .f2-es, .f5-bm, .f6-i {
-  animation: .6s infinite linear;
-}
-.cls-2, .cls-3, .cls-4, .cls-6, .at, .f4-at, .i, .es, .f2-es, .f5-bm, .f6-i {
-  animation-name: dashLine4;
-}
-
-.cls-5 {
-  animation-name: dashLine6;
-}
-
-.bc, .f3-bc, .bm, .er {
-  animation-name: dashLine4;
-  @media screen and (min-width: 768px) {
-    animation-name: dashLine2;
-  }
-}
-
-.bc, .f3-bc, .f5-bm, .f2-es, .er {
-  animation-direction: reverse;
-}
-
-#car-1-1, #car-2-1 {
-  opacity: 1;
-}
-#car-1-2, #car-2-2 {
-  opacity: 0;
-}
-
-#car-1-1 {
-  animation: car1 12s infinite linear;
-}
-#car-2-1 {
-  animation: car2 8s infinite linear;
-}
-#car-1-2 {
-  animation: car1 12s infinite reverse linear;
-}
-#car-2-2 {
-  animation: car2 8s infinite reverse linear;
-}
-
-.person {
-  position: absolute;
-  z-index: 2;
-}
-.person-1 {
-  top: 35%;
-  width: 30px;
-  height: 85px;
-  background-image: url('../images/person-1.png');
-  background-size: 90px 85px;
-  animation: walkCycle1 0.5s steps(3) infinite, lineForward1 30s linear forwards alternate infinite;
-}
-.person-2 {
-  top: 71%;
-  width: 20px;
-  height: 85px;
-  background-image: url('../images/person-2.png');
-  background-size: 60px 85px;
-  animation: walkCycle2 0.5s steps(3) infinite, lineForward2 50s linear forwards alternate infinite;
-}
-.person-3 {
-  top: 45.5%;
-  width: 20px;
-  height: 85px;
-  background-image: url('../images/person-3.png');
-  background-size: 60px 85px;
-  animation: walkCycle2 0.5s steps(3) infinite, lineForward3 40s linear forwards alternate infinite;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes scale {
   0% {
     opacity: 0;
@@ -131,180 +55,27 @@
   }
 }
 
-@keyframes car1 {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(-13%, -11.2%);
-    opacity: 1;
-  }
-  51% {
-    transform: translate(-13%, -11.2%);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-13%, -11.2%);
-    opacity: 0;
-  }
-}
-
-@keyframes car2 {
-  0% {
-    transform: translate(0, 0);
-    opacity: 1;
-  }
-  50% {
-    transform: translate(8.4%, 8%);
-    opacity: 1;
-  }
-  51% {
-    opacity: 0;
-  }
-  100% {
-    transform: translate(8.4%, 8%);
-    opacity: 0;
-  }
-}
-
-@keyframes walkCycle1 {
-  0% {
-    background-position: 0px;
-  }
-  100% {
-    background-position: -90px;
-  }
-}
-@keyframes walkCycle2 {
-  0% {
-    background-position: 0px;
-  }
-  100% {
-    background-position: -60px;
-  }
-}
-@keyframes lineForward1 {
-  0% {
-    left: 10.5%;
-    transform: scaleX(1);
-  }
-  49% {
-    transform: scaleX(1);
-  }
-  50% {
-    left: 25%;
-    transform: scaleX(-1);
-  }
-  99% {
-    transform: scaleX(-1);
-  }
-  100% {
-    left: 10.5%;
-    transform: scaleX(1);
-  }
-}
-@keyframes lineForward2 {
-  0% {
-    left: 29%;
-    transform: scaleX(1);
-  }
-  49% {
-    transform: scaleX(1);
-  }
-  50% {
-    left: 49%;
-    transform: scaleX(-1);
-  }
-  99% {
-    transform: scaleX(-1);
-  }
-  100% {
-    left: 29%;
-    transform: scaleX(1);
-  }
-}
-@keyframes lineForward3 {
-  0% {
-    left: 89.5%;
-    transform: scaleX(-1);
-  }
-  49% {
-    transform: scaleX(-1);
-  }
-  50% {
-    left: 74.5%;
-    transform: scaleX(1);
-  }
-  99% {
-    transform: scaleX(1);
-  }
-  100% {
-    left: 89.5%;
-    transform: scaleX(-1);
-  }
-}
-
-@keyframes dashLine4 {
-  0% {
-    stroke-dasharray: 4;
-    stroke-dashoffset: 8;
-  }
-  100% {
-    stroke-dasharray: 4;
-    stroke-dashoffset: 4;
-  }
-}
-@keyframes dashLine6 {
-  0% {
-    stroke-dasharray: 6;
-    stroke-dashoffset: 12;
-  }
-  100% {
-    stroke-dasharray: 6;
-    stroke-dashoffset: 6;
-  }
-}
-@keyframes dashLine2 {
-  0% {
-    stroke-dasharray: 2;
-    stroke-dashoffset: 4;
-  }
-  100% {
-    stroke-dasharray: 2;
-    stroke-dashoffset: 2;
-  }
-}
-
 .pin {
   position: absolute;
-  width: 3.5%;
+  width: 4.25%;
   &.pin-1 {
-    top: 3.75%;
-    left: 21%;
+    top: 33.5%;
+    left: 72%;
   }
   &.pin-2 {
-    top: 30.5%;
-    left: 8.25%;
+    top: 37.5%;
+    left: 49.25%;
   }
   &.pin-3 {
-    top: 53.75%;
-    left: 38.7%;
+    top: 33.25%;
+    left: 30%;
   }
   &.pin-4 {
-    top: 40.5%;
-    left: 81.25%;
+    top: 7.75%;
+    left: 14%;
   }
   &.pin-5 {
-    top: 36.85%;
-    left: 50.9%;
-  }
-  &.pin-6 {
-    top: 10.5%;
-    left: 43.5%;
-  }
-  &.pin-7 {
-    top: 63.35%;
-    left: 12.65%;
+    top: 10.25%;
+    left: 90.95%;
   }
 }
