@@ -233,7 +233,7 @@ footer {
     background-color: $secondary;
     position: relative;
     width: 80%;
-    height: 80%;
+    height: 75%;
     overflow: scroll;
     z-index: 10;
     left: 10%;
@@ -256,7 +256,7 @@ footer {
         }
     }
     .step-block {
-        padding: 0 30px;
+        padding: 0 60px;
     }
     @include mobile {
         .lightbox-close {
