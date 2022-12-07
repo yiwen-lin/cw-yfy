@@ -2,9 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@400;500&display=swap');
 
 body {
-    background-color: FBFBFB;
+    background-color: #FBFBFB;
     color: #222;
     font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
     &.opened {
       overflow: hidden;
     }
@@ -202,16 +206,16 @@ footer {
     .title-block {
         position: relative;
         color: #fff;
-        text-shadow: 0em 0.15em 0.3em #999;
+        // text-shadow: 0em 0.15em 0.3em #999;
         h1.op-title {
-            font-size: 58px;
+            font-size: 50px;
             span {
                 font-size: 70px;
                 font-weight: 500;
             }
         }
         .s-tittle {
-            font-size: 30px;
+            font-size: 26px;
             letter-spacing:4px;
         }
     }
@@ -232,17 +236,17 @@ footer {
     // border: 1px solid #000;
     background-color: $secondary;
     position: relative;
-    width: 80%;
-    height: 75%;
+    width: 44%;
+    height: auto;
     overflow: scroll;
     z-index: 10;
-    left: 10%;
-    top: 10%;
+    left: 28%;
+    top: 25%;
     svg{
         padding-left: 30px;
     }
     .lightbox-container {
-        padding: 60px 0px;
+        padding: 50px 0px 40px;
         min-height: 100%;
     }
     .lightbox-close {
@@ -256,7 +260,7 @@ footer {
         }
     }
     .step-block {
-        padding: 0 60px;
+        padding: 0 40px;
     }
     @include mobile {
         .lightbox-close {
@@ -290,7 +294,7 @@ footer {
 }
 .op-mb {
     padding-top:100px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     .title-block {
         position: relative;
         color: #fff;
