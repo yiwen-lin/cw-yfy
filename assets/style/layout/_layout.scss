@@ -236,12 +236,13 @@ footer {
     // border: 1px solid #000;
     background-color: $secondary;
     position: relative;
-    width: 44%;
-    height: auto;
+    width: 70%;
+    min-height: auto;
     overflow: scroll;
     z-index: 10;
-    left: 28%;
+    left: 15%;
     top: 25%;
+    border-radius: 20px;
     svg{
         padding-left: 30px;
     }
@@ -260,7 +261,7 @@ footer {
         }
     }
     .step-block {
-        padding: 0 40px;
+        padding: 0 40px 0 20px;
     }
     @include mobile {
         .lightbox-close {
