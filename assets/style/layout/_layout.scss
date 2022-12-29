@@ -1,6 +1,5 @@
 //全站字體
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Roboto:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Roboto:wght@300;500&display=swap');
 body {
     background-color: #FBFBFB;
     color: #222;
@@ -202,16 +201,18 @@ footer {
     // background-color: $secondary;
     background: url(../images/kv.jpg) center bottom no-repeat;
     background-size: cover;
-    padding: 80px 0;
+    padding: 60px 0;
     .title-block {
         position: relative;
         color: #fff;
         // text-shadow: 0em 0.15em 0.3em #999;
         h1.op-title {
             font-size: 50px;
+            font-weight: 900;
+            letter-spacing: -2px;
             span {
-                font-size: 70px;
-                font-weight: 500;
+                font-size: 74px;
+                font-weight: 900;
             }
         }
         .s-tittle {
@@ -238,10 +239,11 @@ footer {
     position: relative;
     width: 70%;
     min-height: auto;
-    overflow: scroll;
+    // overflow: scroll;
+    overflow: hidden;
     z-index: 10;
     left: 15%;
-    top: 25%;
+    top: 20%;
     border-radius: 20px;
     svg{
         padding-left: 30px;
